@@ -13,9 +13,14 @@ app.use((req, res, next) => {
   next();
 });
 
+// Middleware pour parser les données JSON
+app.use(express.json());
+
+// Middleware pour parser les données d'un formulaire URL-encoded
+app.use(express.urlencoded({ extended: true }));
+
 // Route pour l'envoi d'e-mails
 app.post('/send-email', server);
-
 
 // Route de test
 app.use((req, res) => {
