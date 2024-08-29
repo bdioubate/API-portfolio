@@ -18,9 +18,9 @@ module.exports = async function sendEmail(req, res) {
             user: process.env.EMAIL,
             pass: process.env.PASSWORD,
           },
-          tls: {
+          /*tls: {
             ciphers: process.env.TLS_CIPHERS,
-          },
+          },*/
         });
   
         const mailOptions = {
